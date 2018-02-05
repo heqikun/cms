@@ -3,6 +3,7 @@
 <%
 String path = request.getContextPath();
 String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/backend/";
+
 %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
@@ -12,6 +13,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	<title>CMS 后台管理工作平台</title>
 	<link rel="stylesheet" type="text/css" href="css/style.css"/>
 	<script type="text/javascript" src="js/js.js"></script>
+	
 </head>
 <body>
 <div id="top"> </div>
@@ -33,7 +35,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
         <label>验证码：
         <input name="chknumber" type="text" id="chknumber" maxlength="4" class="chknumber_input" />
         </label>
-        <img src="images/checkcode.png" id="safecode" />
+        <img src="images/checkcode.png" id="safecode" onclick="reloadcode()"/>
       </div>
     </div>
     <div id="center_middle_right"></div>
